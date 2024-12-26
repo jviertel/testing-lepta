@@ -1,5 +1,8 @@
-export function getTemplate({ redirectPath, withError }: { redirectPath: string; withError: boolean; }): string {
-  return `<!doctype html>
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getTemplate = getTemplate;
+function getTemplate({ redirectPath, withError }) {
+    return `<!doctype html>
   <html lang="en" data-theme="dark">
     <head>
       <meta charset="utf-8">
