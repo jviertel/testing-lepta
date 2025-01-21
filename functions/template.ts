@@ -25,6 +25,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           max-width: 600px;
           margin: 0 auto;
           text-align: center;
+          background-color: #11abc3;
         }
         .error {
           background: white;
