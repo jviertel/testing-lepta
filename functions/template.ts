@@ -25,7 +25,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 50vh;
+          height: 30vh;
           padding: 2rem 1rem;
           max-width: 600px;
           text-align: center;
@@ -33,7 +33,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           border-radius: 10px;
         }
-          
+
         .error {
           background: white;
           border-radius: 11px;
@@ -45,10 +45,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
         h1 {
           margin-bottom: 0.5rem;
         }
-        h2 {
-          color: #1d2a2e;
-          margin-bottom: 1rem;
-        }
+
         input[type="password"] {
           padding: 0.5em;
           margin: 1rem 0;
@@ -74,10 +71,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
     <body>
       <main>
         <article>
-          <hgroup>
-            <h1>Password</h1>
-            <h2>Please enter your password for this site.</h2>
-          </hgroup>
+          <h1>Please enter your password for this site.</h2>
           ${withError ? `<p class="error">Incorrect password, please try again.</p>` : ''}
           <form method="post" action="/cfp_login">
             <input type="hidden" name="redirect" value="${redirectPath}" />
