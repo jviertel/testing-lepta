@@ -7,22 +7,15 @@ export async function onRequestPost(context: { request: Request; env: { CFP_PASS
   const { password, redirect } = Object.fromEntries(body);
   const hashedPassword = await sha256(password.toString());
 
-  const redirectPath = redirect.toString() || '/';
-
   if (!env.CFP_PASSWORD) {
     // Handle the case where CFP_PASSWORD is undefined
-    return new Response('', {
-      status: 302,
-      headers: {
-        'Cache-Control': 'no-cache',
-        Location: `${redirectPath}?error=1`
-      }
-    });
+    return new Response('Password not set in environment', { status: 500 });
   }
 
   const hashedCfpPassword = await sha256(env.CFP_PASSWORD);
+  const redirectPath = redirect.toString() || '/';
 
-  if (hashedPassword === hashedCfpPassword) {
+  if ((hashedPassword === hashedCfpPassword) && env.CFP_PASSWORD) {
     const cookieKeyValue = await getCookieKeyValue(env.CFP_PASSWORD);
 
     return new Response('', {
