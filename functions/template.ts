@@ -9,7 +9,15 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
       <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
       <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+        
+        body {
+          background-color: #c5d9de;
+        }
+
         body > main {
+          font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+          color: color: #1d2a2e;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -24,7 +32,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           color: var(--del-color);
           padding: 0.5em 1em;
         }
-        h2 { color: var(--color-h2); }
+        h2 { color: #1d2a2e; }
       </style>
     </head>
     <body>
