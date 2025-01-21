@@ -20,7 +20,7 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
         }
         .error {
           background: white;
-          border-radius: 10px;
+          border-radius: 11px;
           color: var(--del-color);
           padding: 0.5em 1em;
         }
