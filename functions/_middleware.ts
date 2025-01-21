@@ -10,8 +10,7 @@ export async function onRequest(context: { request: Request; next: () => Promise
 
   if (
     pathname === '/resources' && // Only protect the /about page
-    !(cookie.includes(cookieKeyValue)) && // Check if cookie exists
-    env.CFP_PASSWORD // Ensure password is set in environment
+    !(cookie.includes(cookieKeyValue))// Check if cookie exists
   ) {
     // Redirect to login if no valid cookie for /about
     return new Response(getTemplate({ redirectPath: pathname, withError: error === '1' }), {

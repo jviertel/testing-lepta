@@ -15,7 +15,7 @@ export async function onRequestPost(context: { request: Request; env: { CFP_PASS
   const hashedCfpPassword = await sha256(env.CFP_PASSWORD);
   const redirectPath = redirect.toString() || '/';
 
-  if ((hashedPassword === hashedCfpPassword) && env.CFP_PASSWORD) {
+  if (hashedPassword === hashedCfpPassword) {
     const cookieKeyValue = await getCookieKeyValue(env.CFP_PASSWORD);
 
     return new Response('', {
