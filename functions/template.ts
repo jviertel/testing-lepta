@@ -6,8 +6,6 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Password Protected Site</title>
       <meta name="description" content="This site is password protected.">
-      <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
-      <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
         
