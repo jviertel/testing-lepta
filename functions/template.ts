@@ -41,6 +41,26 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           color: #1d2a2e;
           margin-bottom: 1rem;
         }
+        input[type="password"] {
+          padding: 0.5em;
+          margin: 1rem 0;
+          border: 1px solid #1d2a2e;
+          border-radius: 5px;
+          width: 100%;
+          max-width: 300px;
+        }
+        button {
+          padding: 0.5em 1em;
+          background-color: #1d2a2e;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        button:hover {
+          background-color: #163238;
+        }
       </style>
     </head>
     <body>
