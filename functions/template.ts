@@ -15,22 +15,32 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
 
         body > main {
           font-family: "Open Sans", system-ui, -apple-system, sans-serif;
-          color: color: #1d2a2e;
+          color: #1d2a2e;
           display: flex;
           flex-direction: column;
           justify-content: center;
+          align-items: center;
           min-height: calc(100vh - 7rem);
-          padding: 1rem 0;
+          padding: 2rem 1rem;
           max-width: 600px;
           margin: 0 auto;
+          text-align: center;
         }
         .error {
           background: white;
           border-radius: 11px;
           color: var(--del-color);
           padding: 0.5em 1em;
+          margin-top: 1rem;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        h2 { color: #1d2a2e; }
+        h1 {
+          margin-bottom: 0.5rem;
+        }
+        h2 {
+          color: #1d2a2e;
+          margin-bottom: 1rem;
+        }
       </style>
     </head>
     <body>
