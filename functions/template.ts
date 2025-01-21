@@ -9,8 +9,13 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
         
-        body {
+       body {
           background-color: #c5d9de;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
         }
 
         body > main {
@@ -20,13 +25,15 @@ export function getTemplate({ redirectPath, withError }: { redirectPath: string;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          min-height: calc(100vh - 7rem);
+          height: 50vh;
           padding: 2rem 1rem;
           max-width: 600px;
-          margin: 0 auto;
           text-align: center;
           background-color: #11abc3;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
         }
+          
         .error {
           background: white;
           border-radius: 11px;
